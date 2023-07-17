@@ -55,7 +55,7 @@ export default function Home() {
     //Password Form validation
       const inputPassword = document.getElementById('password')?.value;
       if(inputPassword === ''){
-        validationMessageForPassword =  "This is a required field";
+        validationMessageForPassword =  "Password must be more than 6 chars";
         setValidationMessageForPassword(validationMessageForPassword);
       }else{
         validationMessageForPassword = " ";
@@ -110,9 +110,9 @@ export default function Home() {
         {
         openToggle && 
             <div>
-              <input type="password" onChange={(elem) => setPassword(elem.target.value)} onChangeCapture={handleChange} value={password} id="password" name="password" placeholder="Password" placeholder="Password" className="flex mx-auto mt-5 px-6 border rounded border-slate-200 py-4 outline-indigo-300 text-sm w-[290px] md:w-[370px]"/>
+              <input type="password" onChange={(elem) => setPassword(elem.target.value)} onChangeCapture={handleChange} value={password} id="password" name="password" placeholder="Password" placeholder="Password" className="flex mx-auto mt-5 px-6 border rounded border-slate-200 py-4 outline-indigo-300 text-xl w-[290px] md:w-[370px]"/>
 
-              <img src="./images/Vector (5).svg" alt="" className="absolute mx-[246px] md:mx-[319px] -mt-9" onClick={() => {setOpenToggle(null); setCloseToggle(true);}}/>
+              <img src="./images/Vector (5).svg" alt="" className="absolute mx-[246px] md:mx-[319px] -mt-9 text-xl" onClick={() => {setOpenToggle(null); setCloseToggle(true);}}/>
             </div>
         }
 
@@ -120,12 +120,12 @@ export default function Home() {
          closeToggle && 
             <div>
 
-              <input type="text" onChange={(elem) => setPassword(elem.target.value)} onChangeCapture={handleChange} value={password} id="password" name="password" placeholder="Password" className="flex mx-auto mt-5 px-6 border rounded border-slate-200 py-4 outline-indigo-300 text-sm w-[290px] md:w-[370px]"/>
+              <input type="text" onChange={(elem) => setPassword(elem.target.value)} onChangeCapture={handleChange} value={password} id="password" name="password" placeholder="Password" className="flex mx-auto mt-5 px-6 border rounded border-slate-200 py-4 outline-indigo-300 text-xl w-[290px] md:w-[370px]"/>
               <img src="./images/Vector (16).svg" alt="" className="absolute mx-[246px] md:mx-[319px] -mt-9" onClick={() => {setCloseToggle(null); setOpenToggle(true)}}/>
             </div>
         }
       </div>
-       <span className="flex justify-center mr-[36px] text-red-300 mt-2">{validationMessageForPassword}</span>
+       <span className="flex justify-center ml-[70px] text-red-300 mt-2">{validationMessageForPassword}</span>
 
 
      {
