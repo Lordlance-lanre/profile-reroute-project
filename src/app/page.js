@@ -89,7 +89,6 @@ export default function Home() {
           type: 'success'
         })
          localStorage.setItem('Entries', email);
-         localStorage.setItem('Values', email);
         setTimeout(() => router.push("/profile"), 500);
       } 
   }
