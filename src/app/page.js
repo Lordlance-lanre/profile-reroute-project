@@ -54,8 +54,8 @@ export default function Home() {
       
     //Password Form validation
       const inputPassword = document.getElementById('password')?.value;
-      if(inputPassword.length < 5){
-        validationMessageForPassword =  "Password must be more than 5 chars";
+      if(inputPassword.length < 6){
+        validationMessageForPassword =  "Password must be less than 5 chars";
         setValidationMessageForPassword(validationMessageForPassword);
       }else{
         validationMessageForPassword = " ";
