@@ -54,8 +54,8 @@ export default function Home() {
       
     //Password Form validation
       const inputPassword = document.getElementById('password')?.value;
-      if(inputPassword === ''){
-        validationMessageForPassword =  "Password must be more than 6 chars";
+      if(inputPassword.length < 5){
+        validationMessageForPassword =  "Password must be more than 5 chars";
         setValidationMessageForPassword(validationMessageForPassword);
       }else{
         validationMessageForPassword = " ";
@@ -76,7 +76,7 @@ export default function Home() {
          password: password
       }
 
-      if(email.split("").includes("@") && password.length > 5){
+      if(email.split("").includes("@") && password.length < 5){
         toast("Login successful",{
           position: "top-right",
           autoClose: 5000,
